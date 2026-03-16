@@ -25,8 +25,7 @@ LLMOps encompasses the practices and tools needed to operationalize LLMs, coveri
 - [Prompt Management](#prompt-management)
 - [Guardrails and Safety](#guardrails-and-safety)
 - [Gateway and Routing](#gateway-and-routing)
-- [Cost Management](#cost-management)
-- [CI/CD for LLMs](#cicd-for-llms)
+- [Caching](#caching)
 - [Platforms](#platforms)
 
 ## Model Serving and Inference
@@ -89,7 +88,7 @@ LLMOps encompasses the practices and tools needed to operationalize LLMs, coveri
 - [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) - NVIDIA's toolkit for programmable guardrails with content moderation, fact-checking, and jailbreak detection.
 - [Guardrails AI](https://github.com/guardrails-ai/guardrails) - Pydantic-style validation for LLM outputs with a hub of pre-built validators.
 - [LLM Guard](https://github.com/protectai/llm-guard) - Comprehensive security toolkit with 35 built-in scanners for prompt injection, PII detection, and toxicity.
-- [Llama Guard](https://github.com/meta-llama/PurpleLlama) - Meta's safety classifier model for input/output content moderation in LLM apps.
+- [LLaMA Guard](https://github.com/meta-llama/PurpleLlama) - Meta's safety classifier model for input/output content moderation in LLM apps.
 - [Rebuff](https://github.com/protectai/rebuff) - Prompt injection detection using heuristics, embeddings, and pattern matching.
 - [Vigil](https://github.com/deadbits/vigil-llm) - LLM security scanner detecting prompt injections, jailbreaks, and data exfiltration attempts.
 - [Lakera Guard](https://www.lakera.ai/) - Commercial API for prompt injection defense with sub-50ms response times.
@@ -103,22 +102,11 @@ LLMOps encompasses the practices and tools needed to operationalize LLMs, coveri
 - [Martian](https://github.com/withmartian/martian) - Intelligent model router that automatically selects the best LLM for each request.
 - [Cortex.cpp](https://github.com/janhq/cortex.cpp) - Local AI API platform acting as a gateway for self-hosted model serving.
 
-## Cost Management
+## Caching
 
 - [GPTCache](https://github.com/zilliztech/GPTCache) - Semantic caching for LLMs that reduces API calls by matching similar queries.
-- [LiteLLM](https://github.com/BerriAI/litellm) - Tracks token usage and costs per request across all providers with budget alerting.
-- [Helicone](https://github.com/Helicone/helicone) - Automatic cost tracking per request with dashboards for spend by model, user, and feature.
-- [Langfuse](https://github.com/langfuse/langfuse) - Open-source cost tracking with per-trace cost attribution including cached and multimodal tokens.
-- [Portkey](https://github.com/Portkey-AI/gateway) - Budget controls, cost analytics, and automatic model fallback to cheaper alternatives.
-
-## CI/CD for LLMs
-
-- [promptfoo](https://github.com/promptfoo/promptfoo) - YAML-driven prompt and model testing with CLI and native CI/CD integration plus red-teaming.
-- [DeepEval](https://github.com/confident-ai/deepeval) - Pytest-native LLM unit testing that plugs directly into CI/CD pipelines.
-- [Giskard](https://github.com/Giskard-AI/giskard) - Testing-as-code approach scanning models for bias, hallucination, and robustness in CI.
-- [LangWatch](https://github.com/langwatch/langwatch) - Simulation sets and batch test runs designed for CI/CD pipeline integration.
-- [Agenta](https://github.com/Agenta-AI/agenta) - Prompt deployment pipelines with staging environments, A/B testing, and rollback.
-- [RAGAS](https://github.com/explodinggradients/ragas) - RAG pipeline quality gates that can block deployments on metric regression.
+- [Redis Semantic Cache](https://github.com/redis/redis-py) - Redis-based semantic caching using vector similarity for LLM response deduplication.
+- [Momento](https://www.gomomento.com/) - Serverless caching service with built-in LLM response caching and TTL management.
 
 ## Platforms
 
